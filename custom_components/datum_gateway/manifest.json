@@ -1,0 +1,12 @@
+{
+  "domain": "datum_gateway",
+  "name": "DATUM Gateway",
+  "codeowners": ["@vincenzopalazzo"],
+  "config_flow": true,
+  "documentation": "https://github.com/vincenzopalazzo/ha-datum-gateway",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/vincenzopalazzo/ha-datum-gateway/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

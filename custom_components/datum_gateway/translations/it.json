@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "DATUM Gateway",
+        "description": "API JSON di un DATUM Gateway. Le statistiche si leggono da /v1 senza password. Questa integrazione non modifica la configurazione del gateway.",
+        "data": {
+          "url": "URL API",
+          "name": "Nome"
+        },
+        "data_description": {
+          "url": "Solo l'URL base, senza percorso. Lo legge Home Assistant: 127.0.0.1 funziona solo se l'API è in ascolto lì.",
+          "name": "Facoltativo. Diventa il nome del dispositivo. Utile se sulla stessa macchina girano più reti."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Il DATUM Gateway non ha risposto a /v1/decentralized_client_stats",
+      "invalid_url": "L'URL deve iniziare con http:// o https://"
+    },
+    "abort": {
+      "already_configured": "Questo URL del DATUM Gateway è già stato aggiunto"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "ready": { "name": "Pronto" }
+    },
+    "sensor": {
+      "status": { "name": "Stato" },
+      "pool": { "name": "Pool" },
+      "accepted_shares": { "name": "Share accettate" },
+      "rejected_shares": { "name": "Share rifiutate" },
+      "accepted_difficulty": { "name": "Difficoltà accettata" },
+      "rejected_difficulty": { "name": "Difficoltà rifiutata" },
+      "pool_min_diff": { "name": "Difficoltà minima del pool" },
+      "uptime": { "name": "Uptime" },
+      "hashrate": { "name": "Hashrate stimato" },
+      "connections": { "name": "Connessioni" },
+      "subscriptions": { "name": "Sottoscrizioni work" },
+      "stratum_threads": { "name": "Thread Stratum" },
+      "block_height": { "name": "Altezza blocco" },
+      "block_reward": { "name": "Ricompensa blocco" },
+      "template_tx": { "name": "Transazioni nel template" },
+      "template_size": { "name": "Dimensione template" },
+      "template_weight": { "name": "Peso template" },
+      "threads": { "name": "Statistiche thread" }
+    }
+  }
+}
